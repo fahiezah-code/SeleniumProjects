@@ -19,10 +19,10 @@ public class DriverManager {
     }
  */
 
-    public WebDriver initializeDriver(){
+    public WebDriver initializeDriver(String browser){
         WebDriver driver;
         //to run from command line pass browser, use System.getProperty
-        String browser = System.getProperty("browser", "CHROME");
+        browser = System.getProperty("browser",browser); // here"browser" is from Mvn command line, browser from TestNG.xml
         switch (DriverType.valueOf(browser)){
             case CHROME : //to control anyUppercase or lCase,
                 WebDriverManager.chromedriver().cachePath("Drivers").setup();
