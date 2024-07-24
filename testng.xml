@@ -11,7 +11,7 @@
     </test></suite>-->
 
 <suite name="All Test Suite" parallel="tests">
-<test name="RunOnChrome" parallel="methods">
+<!--<test name="RunOnChrome" parallel="methods">
     <parameter name="browser" value="CHROME"></parameter>
     <classes>
         <class name="TestCases.LoginTest"></class>
@@ -22,5 +22,22 @@
     <classes>
         <class name="TestCases.LoginTest"></class>
     </classes>
-</test>
+</test>-->
+
+    <test  name="RunOnChrome" parallel="methods">
+        <parameter name="browser" value="CHROME"></parameter>
+        <classes>
+            <class name="TestCases.NavigationTest"></class>
+            <class name="TestCases.AddToCartTest"></class>
+            <class name="TestCases.SearchTest"></class>
+        </classes>
+    </test>
+    <test  name="RunOnFirefox" parallel="methods">
+        <parameter name="browser" value="FIREFOX"></parameter>
+        <classes>
+            <class name="TestCases.NavigationTest"></class>
+            <class name="TestCases.AddToCartTest"></class>
+            <class name="TestCases.SearchTest"></class>
+        </classes>
+    </test>
 </suite>

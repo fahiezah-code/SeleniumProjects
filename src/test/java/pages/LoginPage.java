@@ -17,7 +17,8 @@ public class LoginPage extends BasePage {
     public String clickOnFeelingLuckyBtn(){
         driver.findElement(feelingLuckyBtn).click();
        String title = driver.getTitle();
-       return title;
+
+        return title;
     }
     public String clickOnGmailBtn(){
         driver.findElement(gmailBtn).click();

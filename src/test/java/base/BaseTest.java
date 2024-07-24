@@ -24,8 +24,11 @@ public class BaseTest {
     public void setUpDriver(@Optional String browser){
         //to run from command line pass browser, use System.getProperty
         browser = System.getProperty("browser",browser); // here"browser" is from Mvn command line, browser from TestNG.xml
-       if(browser == null) browser = "CHROME";
+       if(browser == null){
+           browser = "CHROME";
+       }
         setDriver(new DriverManager().initializeDriver(browser));
+      //  System.out.println(Thread.currentThread().getId() +" , "+ getDriver());
         //every thread will come create new local driver for each TC
     }
     @AfterMethod
