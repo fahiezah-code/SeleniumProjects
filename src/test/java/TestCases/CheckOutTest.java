@@ -25,7 +25,7 @@ public class CheckOutTest extends BaseTest {
         checkOutPage.load()
                 .setBillingAddress(billingAddress)
                 .selectDirectBankTransfer();
-      //  Thread.sleep(4000);
+       Thread.sleep(3000);
                 checkOutPage.placeOrder();
         Assert.assertEquals(checkOutPage.getTextSuccessNotice(),"Thank you. Your order has been received.");
 

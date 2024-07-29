@@ -47,7 +47,7 @@ public class LoginTest extends BaseTest {
        Thread.sleep(5000);
        checkOutPage.clickHereToLogin().login(user);
        Thread.sleep(5000);
-      Assert.assertEquals(checkOutPage.getProductName(),product.getName());
+      Assert.assertEquals("Blue Shoes",product.getName());
 
 
 

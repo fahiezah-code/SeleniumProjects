@@ -34,14 +34,15 @@
             <class name="TestCases.CheckOutTest"></class>
         </classes>
     </test>
-    <test  name="RunOnFirefox" parallel="methods">
-        <parameter name="browser" value="FIREFOX"></parameter>
-        <classes>
-            <class name="TestCases.NavigationTest"></class>
-            <class name="TestCases.AddToCartTest"></class>
-            <class name="TestCases.SearchTest"></class>
-            <class name="TestCases.LoginTest"></class>
-            <class name="TestCases.CheckOutTest"></class>
-        </classes>
-    </test>
-</suite>
+
+       <test  name="RunOnFirefox" parallel="methods">
+           <parameter name="browser" value="FIREFOX"></parameter>
+           <classes>
+               <class name="TestCases.NavigationTest"></class>
+               <class name="TestCases.AddToCartTest"></class>
+               <class name="TestCases.SearchTest"></class>
+               <class name="TestCases.LoginTest"></class>
+               <class name="TestCases.CheckOutTest"></class>
+           </classes>
+       </test>
+   </suite>
