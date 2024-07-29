@@ -111,14 +111,7 @@ public class Problems {
         return originalNum == sum;
     }
 
-    /*
- 153
- find num of length = 3
-    convert 153 to digits ->  153/10
-    find nth power of each digit
-    add into sumValue
 
-     */
 
 
 }
