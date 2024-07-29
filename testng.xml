@@ -30,6 +30,8 @@
             <class name="TestCases.NavigationTest"></class>
             <class name="TestCases.AddToCartTest"></class>
             <class name="TestCases.SearchTest"></class>
+            <class name="TestCases.LoginTest"></class>
+            <class name="TestCases.CheckOutTest"></class>
         </classes>
     </test>
     <test  name="RunOnFirefox" parallel="methods">
@@ -38,6 +40,8 @@
             <class name="TestCases.NavigationTest"></class>
             <class name="TestCases.AddToCartTest"></class>
             <class name="TestCases.SearchTest"></class>
+            <class name="TestCases.LoginTest"></class>
+            <class name="TestCases.CheckOutTest"></class>
         </classes>
     </test>
 </suite>

@@ -1,11 +1,16 @@
 package base;
 
 import factory.DriverManager;
+import io.restassured.http.Cookies;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import utils.CookieUtil;
+
+import java.util.List;
 
 public class BaseTest {
 
@@ -34,6 +39,13 @@ public class BaseTest {
     @AfterMethod
     public void tearDown(){
      getDriver().quit();
+    }
+
+    public void injectCookiesToBrowser(Cookies cookies){
+        List<Cookie> seleniumCookies = new CookieUtil().convertRestAssuredCookiesToSeleniumCookies(cookies);
+        for(Cookie cookie : seleniumCookies){
+            getDriver().manage().addCookie(cookie);
+        }
     }
 
 
