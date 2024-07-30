@@ -11,6 +11,7 @@ public class ConfigLoader {
         // to load the properties
         properties = PropertyUtils.propertyLoader("src/test/resources/config.properties");
 
+
     }
 
    public static ConfigLoader getInstance(){

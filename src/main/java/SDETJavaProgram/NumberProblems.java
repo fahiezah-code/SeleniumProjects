@@ -1,6 +1,6 @@
 package SDETJavaProgram;
 
-public class Problems {
+public class NumberProblems {
 
     public static void main(String[] args) {
 
@@ -9,7 +9,8 @@ public class Problems {
         // findFibonacci(7);
         //  swapNumber(5,7);
         // System.out.println(findFactorialNum(5));
-        System.out.println(reverseNumber(109767));
+       // System.out.println(reverseNumber(109767));
+        System.out.println(sumOfDigitsOfNum(12345));
 
 
     }
@@ -110,6 +111,46 @@ public class Problems {
 
         return originalNum == sum;
     }
+
+    public static int findNumOfDigits(int num){
+        int numOfDigit = 0;
+        if(num == 0){
+            return 1;
+        }else {
+            while(num > 0){
+                num = num / 10;
+                numOfDigit++;
+            }
+            return numOfDigit;
+        }
+
+    }
+
+    public static boolean isPalindrome(int num){
+        // 353 -> it is same with reverse
+        //45354 --> 1) option do reverse order, then check originalNum == reverseNum?
+        int originalNum = num;  int reverseNum = 0;
+        while(num > 0){
+           int digit = num % 10;
+            reverseNum = reverseNum * 10 + digit;
+            num = num / 10;
+        }
+        if(originalNum == reverseNum){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public static int sumOfDigitsOfNum(int num){
+        int sum = 0;
+        while(num > 0){
+          sum += num % 10;
+          num = num / 10;
+        }
+        return sum;
+    }
+
 
 
 
