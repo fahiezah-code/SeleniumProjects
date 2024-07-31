@@ -10,7 +10,7 @@
         </methods></class></classes>
     </test></suite>-->
 
-<suite name="All Test Suite" parallel="tests">
+<suite name="All Test Suite">
 <!--<test name="RunOnChrome" parallel="methods">
     <parameter name="browser" value="CHROME"></parameter>
     <classes>
@@ -24,25 +24,33 @@
     </classes>
 </test>-->
 
-    <test  name="RunOnChrome" parallel="methods">
-        <parameter name="browser" value="CHROME"></parameter>
-        <classes>
-            <class name="TestCases.NavigationTest"></class>
-            <class name="TestCases.AddToCartTest"></class>
-            <class name="TestCases.SearchTest"></class>
-            <class name="TestCases.LoginTest"></class>
-            <class name="TestCases.CheckOutTest"></class>
-        </classes>
-    </test>
+        <test  name="RunOnChrome" parallel="methods">
+            <parameter name="browser" value="CHROME"></parameter>
+            <classes>
+                <class name="TestCases.NavigationTest"></class>
+                <class name="TestCases.AddToCartTest"></class>
+                <class name="TestCases.SearchTest"></class>
+                <class name="TestCases.LoginTest"></class>
+                <class name="TestCases.CheckOutTest"></class>
+            </classes>
+        </test>
 
-       <test  name="RunOnFirefox" parallel="methods">
-           <parameter name="browser" value="FIREFOX"></parameter>
+           <test  name="RunOnFirefox" parallel="methods">
+               <parameter name="browser" value="FIREFOX"></parameter>
+               <classes>
+                   <class name="TestCases.NavigationTest"></class>
+                   <class name="TestCases.AddToCartTest"></class>
+                   <class name="TestCases.SearchTest"></class>
+                   <class name="TestCases.LoginTest"></class>
+                   <class name="TestCases.CheckOutTest"></class>
+               </classes>
+           </test>
+
+    <!--
+       <test  name="BDD Approach" >
+           <parameter name="browser" value="CHROME"></parameter>
            <classes>
-               <class name="TestCases.NavigationTest"></class>
-               <class name="TestCases.AddToCartTest"></class>
-               <class name="TestCases.SearchTest"></class>
-               <class name="TestCases.LoginTest"></class>
-               <class name="TestCases.CheckOutTest"></class>
+               <class name="stepsDefinition.LoginStepsDefinition"></class>
            </classes>
-       </test>
+       </test>-->
    </suite>
