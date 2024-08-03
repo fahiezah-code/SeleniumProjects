@@ -17,6 +17,7 @@ public class ArrayChallenge {
         arrayList.add("orange");
         arrayList.add("Cherry");
         arrayList.add("Date");
+        arrayList.add("Grape");
         arrayList.add("Blueberry");
         arrayList.add("Elderberry");
     }
