@@ -10,45 +10,29 @@ import java.util.Set;
 public class ArrayChallenge {
 
     public static void main(String[] args) {
-        int[] arr1 = new int[]{1,2,3,4,5};
-        int[] arr2 = new int[]{4,5,5,4,3,8};
-        int[] sortArray = new int[]{2,1,5,3,4,8};
-       int[] sortedArray = sortNumArray(sortArray);
-    //    System.out.println(removeDuplicateNum(arr2));
         System.out.println(searchElement(new int[]{1,2,4,5,6},5));
-
-
-       // System.out.println(findMissingNumInArray()); //*************
-
-
-      //  System.out.println(findCommonElement(arr1,arr2));
-
+        System.out.println(findCommonElement(new int[]{1, 2, 4, 5, 6}, new int[]{1, 2, 4, 5, 6}));
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("apple");
         arrayList.add("orange");
         arrayList.add("Cherry");
         arrayList.add("Date");
         arrayList.add("Elderberry");
-      //  findFirstAndLastElementofArrayList(arrayList);
-
     }
 
-    public static Set<Integer> findCommonElement(int[] arr1, int[] arr2){
-        HashSet<Integer> set = new HashSet<>();
-
-        for(int num : arr1){
+    public static Set<Integer> findCommonElement(int[] arr1, int[] arr2) {
+        Set<Integer> set = new HashSet<>();
+        for (int num : arr1) {
             set.add(num);
         }
 
-        HashSet<Integer> commonSet = new HashSet<>();
-
-        for(int num : arr2){
-            if(set.contains(num)){
+        Set<Integer> commonSet = new HashSet<>();
+        for (int num : arr2) {
+            if (set.contains(num)) {
                 commonSet.add(num);
             }
         }
         return commonSet;
-
     }
 
     public static void findFirstAndLastElementofArrayList(ArrayList<String> ls){
